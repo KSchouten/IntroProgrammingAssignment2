@@ -1,6 +1,6 @@
 library(tidyverse)
 
-data <- readRDS("data.Rds")
+data <- readRDS("clean_data/data.Rds")
 
 # Bekijk de data in RStudio
 # data is een lijst van gemeenten in Nederland
