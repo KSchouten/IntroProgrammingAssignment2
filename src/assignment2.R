@@ -51,17 +51,14 @@ get_relative_migration_counts <- function(data = data, non_western_only = TRUE) 
 
 # Vraag 3 -----------------------------------------------------------------
 
-# Schrijf een functie die de postcodes teruggeeft waarmee je zo snel mogelijk minstens 'youth_needed' jongeren (0-20 jaar)
-#    kunt verzamelen
-# De set van postcodes is dus het kleinste aantal postcodes waarmee je deze jongeren bij elkaar hebt
-#
-# 'youth_needed' is een parameter van de functie en kan je als gebruiker instellen
+# Schrijf een functie die de kleinste set aan postcodes teruggeeft, waarmee minstens X aantal jongeren (0-20 jaar) worden bereikt.
+# Het gewenste aantal jongeren (X) is een argument van de functie, genaamd 'youth_needed'.
 #
 # De functie geeft een character vector terug met de postcodes
 #
 # Maak ook een helper functie 'get_youth' die voor een data frame de eerste 4 rijen uit het dataframe haalt.
-#   Dit moet je namelijk voor zowel het 'men' als het 'women' dataframe doen (in elke postcode) en deze code wil je niet
-#   kopiëren. De eerste vier rijen corresponderen met de leeftijdsgroepen 0-5, 5-10, 10-15 en 15-20.
+# De eerste vier rijen corresponderen met de leeftijdsgroepen 0-5, 5-10, 10-15 en 15-20.
+#   Dit moet je namelijk voor zowel het 'men' als het 'women' dataframe doen (in elke postcode) en deze code wil je niet kopiëren.
 #
 # Hint: check de map_depth functie om niet in de eerste laag van de lijst te itereren,
 #    maar in een diepere laag (de postcodes op laag 2 bijvoorbeeld)
