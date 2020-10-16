@@ -2,6 +2,8 @@ library(tidyverse)
 
 data <- readRDS("clean_data/data.Rds")
 
+#
+
 # Bekijk de data in RStudio
 # data is een lijst van gemeenten in Nederland
 # Elke gemeente bevat een lijst met postcodes die in die gemeente vallen
