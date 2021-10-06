@@ -1,8 +1,7 @@
 library(tidyverse)
 
-data <- readRDS("clean_data/data.Rds")
-
-#
+# Je kan de data set inladen met de volgende regel (niet in dit bestand zetten)
+# data <- readRDS("clean_data/data.Rds")
 
 # Bekijk de data in RStudio
 # data is een lijst van gemeenten in Nederland
@@ -18,11 +17,10 @@ data <- readRDS("clean_data/data.Rds")
 # Vraag 1 -----------------------------------------------------------------
 
 # Schrijf een functie die een tibble teruggeeft met de kolommen "municipality" en "postal_code_count"
-#   Per gemeente maak je één rij in het dataframe met de naam van de gemeente en het aantal postcodes in die gemeente
+#   Per gemeente maak je één rij in de tibble met de naam van de gemeente en het aantal postcodes in die gemeente
 get_postal_code_counts <- function(data = data){
 
   ## START van jouw code
-
 
 
   ## EINDE jouw code
@@ -35,7 +33,7 @@ get_postal_code_counts <- function(data = data){
 # Schrijf een functie die per gemeente uitrekent hoeveel procent van de bevolking een migratie achtergrond heeft
 # Houdt rekening met de non_western_only parameter: als deze TRUE is bereken je hoeveel procent van de bevolking een
 #   niet-westerse migratie achtergrond heeft; als deze FALSE is neem je beide migratie achtergronden samen in het percentage
-# Deze functie moet een dataframe teruggeven met een kolom "municipality" met daarin de gemeente namen,
+# Deze functie moet een tibble teruggeven met een kolom "municipality" met daarin de gemeente namen,
 #   en een kolom "fraction_migration_background" met daarin de fractie (getal tussen 0 en 1).
 # Als non_western_only TRUE is, maak je van de tweede kolom "fraction_non_western_migration_background" met daarin de fractie.
 get_relative_migration_counts <- function(data = data, non_western_only = TRUE) {
@@ -58,13 +56,11 @@ get_relative_migration_counts <- function(data = data, non_western_only = TRUE) 
 #
 # De functie geeft een character vector terug met de postcodes
 #
-# Maak ook een helper functie 'get_youth' die voor een data frame de eerste 4 rijen uit het dataframe haalt.
-# De eerste vier rijen corresponderen met de leeftijdsgroepen 0-5, 5-10, 10-15 en 15-20.
-#   Dit moet je namelijk voor zowel het 'men' als het 'women' dataframe doen (in elke postcode) en deze code wil je niet kopiëren.
-#
 # Hint: check de map_depth functie om niet in de eerste laag van de lijst te itereren,
 #    maar in een diepere laag (de postcodes op laag 2 bijvoorbeeld)
 get_household_info <- function(data = data, youth_needed = 100000){
+
+
 
   ## START jouw code
 
@@ -72,3 +68,4 @@ get_household_info <- function(data = data, youth_needed = 100000){
   ## EINDE jouw code
 
 }
+
