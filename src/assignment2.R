@@ -18,7 +18,7 @@ library(tidyverse)
 
 # Schrijf een functie die een tibble teruggeeft met de kolommen "municipality" en "postal_code_count"
 #   Per gemeente maak je één rij in de tibble met de naam van de gemeente en het aantal postcodes in die gemeente
-get_postal_code_counts <- function(data = data){
+get_postal_code_counts <- function(data){
 
   ## START van jouw code
 
@@ -36,7 +36,7 @@ get_postal_code_counts <- function(data = data){
 # Deze functie moet een tibble teruggeven met een kolom "municipality" met daarin de gemeente namen,
 #   en een kolom "fraction_migration_background" met daarin de fractie (getal tussen 0 en 1).
 # Als non_western_only TRUE is, maak je van de tweede kolom "fraction_non_western_migration_background" met daarin de fractie.
-get_relative_migration_counts <- function(data = data, non_western_only = TRUE) {
+get_relative_migration_counts <- function(data, non_western_only = TRUE) {
 
   ## START jouw code
 
@@ -58,7 +58,7 @@ get_relative_migration_counts <- function(data = data, non_western_only = TRUE) 
 #
 # Hint: check de map_depth functie om niet in de eerste laag van de lijst te itereren,
 #    maar in een diepere laag (de postcodes op laag 2 bijvoorbeeld)
-get_household_info <- function(data = data, youth_needed = 100000){
+get_household_info <- function(data, youth_needed = 100000){
 
 
 
