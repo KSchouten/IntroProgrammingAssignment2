@@ -48,7 +48,7 @@ check_question_2 <- function(){
   data <- readRDS("clean_data/data.Rds")
 
   relative_migration_counts_all <- get_relative_migration_counts(data, non_western_only = FALSE)
-  if (!"tbl_df" %in% class(postal_codes)){
+  if (!"tbl_df" %in% class(relative_migration_counts_all)){
     stop("When calling get_relative_migration_counts(data, non_western_only=FALSE), it does not return a tibble.")
   }
   if (!has_name(relative_migration_counts_all, "fraction_migration_background")){
@@ -56,7 +56,7 @@ check_question_2 <- function(){
   }
   relative_migration_counts_all$fraction_migration_background <- setNames(relative_migration_counts_all$fraction_migration_background, NULL)
   relative_migration_counts_nw_only <- get_relative_migration_counts(data)
-  if (!"tbl_df" %in% class(postal_codes)){
+  if (!"tbl_df" %in% class(relative_migration_counts_nw_only)){
     stop("When calling get_relative_migration_counts(data, non_western_only=TRUE), it does not return a tibble.")
   }
   if (!has_name(relative_migration_counts_nw_only, "fraction_non_western_migration_background")){
